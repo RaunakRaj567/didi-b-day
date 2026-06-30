@@ -878,12 +878,12 @@ footer{
   audio.addEventListener('play', ()=> setPlayingUI(true));
   audio.addEventListener('pause', ()=> setPlayingUI(false));
 
-  // Loop with a 5-second break when the song ends
+  // Loop with a 3-second break when the song ends
   audio.addEventListener('ended', () => {
     setTimeout(() => {
       audio.currentTime = 0;
       safePlay(audio);
-    }, 5000);
+    }, 3000);
   });
 
   /* Web Audio Synthesizer for Interactive Sound Effects */
